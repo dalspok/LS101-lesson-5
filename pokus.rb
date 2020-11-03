@@ -1,12 +1,31 @@
-books = [
-  {title: 'One Hundred Years of Solitude', author: 'Gabriel Garcia Marquez', published: '1967'},
-  {title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', published: '1925'},
-  {title: 'War and Peace', author: 'Leo Tolstoy', published: '1869'},
-  {title: 'Ulysses', author: 'James Joyce', published: '1922'}
+
+
+
+customer_orders = [
+  {
+    customer_id: 12,
+    customer_name: 'Emma Lopez',
+    orders: [
+      { order_fulfilled: true, order_value: 135.99 },
+      { order_fulfilled: true, order_value: 289.49 },
+      { order_fulfilled: false, order_value: 58.00 }
+    ]
+  },
+  {
+    customer_id: 32,
+    customer_name: 'Michael Richards',
+    orders: [
+      { order_fulfilled: true, order_value: 120.00 },
+      { order_fulfilled: false, order_value: 85.65 }
+    ]
+  },
+  # rest of data...
 ]
 
-books1 = books.sort do |hsh, hsh1|
-  hsh1[:published].to_i <=> hsh[:published].to_i
-end
 
-p books1
+
+fulfilled_orders =[
+  {customer_id: 12, customer_name: 'Emma Lopez', order_value: 425.48},
+  {customer_id: 32, customer_name: 'Michael Richards', order_value: 120.00},
+  # rest of data
+]
